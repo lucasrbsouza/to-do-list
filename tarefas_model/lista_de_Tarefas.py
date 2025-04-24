@@ -1,4 +1,5 @@
 # from tarefa import Tarefa
+from tarefas_model import tarefa
 
 class ListaDeTarefa:
 
@@ -15,10 +16,12 @@ class ListaDeTarefa:
     def remover(self, tarefa):
         self.tarefas.remove(tarefa)
 
-    def concluir(self, tarefa):
-        tarefa.is_concluida()
+    def concluir(self, nome_tarefa):
+        for tarefa in self.tarefas:
+            if tarefa.titulo == nome_tarefa:
+                tarefa.is_concluida(nome_tarefa)
+
     def to_dict(self):
         return [tarefa.to_dict() for tarefa in self.tarefas]
 if __name__ == '__main__':
     pass
-# temos que passar essa classe para salvar em um json
