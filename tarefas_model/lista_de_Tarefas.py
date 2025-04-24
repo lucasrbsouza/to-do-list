@@ -1,4 +1,6 @@
 # from tarefa import Tarefa
+from typing import Any
+
 from tarefas_model import tarefa
 
 class ListaDeTarefa:
@@ -21,7 +23,7 @@ class ListaDeTarefa:
             if tarefa.titulo == nome_tarefa:
                 tarefa.is_concluida(nome_tarefa)
 
-    def to_dict(self):
+    def to_dict(self) -> list[Any]:
         return [tarefa.to_dict() for tarefa in self.tarefas]
 if __name__ == '__main__':
     pass

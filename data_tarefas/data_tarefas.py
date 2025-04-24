@@ -37,5 +37,3 @@ def remover(nome_tarefa):
 
 if __name__ == '__main__':
    pass
-
-    #preciso resolver esse problema
