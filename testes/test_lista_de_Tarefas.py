@@ -7,7 +7,6 @@ from tarefas_model.tarefa import Tarefa
 def lista_tarefas():
     return ListaDeTarefa()
 
-
 @pytest.fixture
 def tarefa_exemplo():
     return Tarefa(titulo="Tarefa de exemplo", descricao="Descrição de exemplo")
